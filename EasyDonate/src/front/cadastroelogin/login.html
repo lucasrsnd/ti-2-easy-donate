@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/src/front/cadastroelogin/login.css" />
+    <link rel="shortcut icon" type="imagex/png" href="/src/img/logo.png">
+    <title>Login</title>
+  </head>
+  <body>
+    <!--NAV BAR-->
+    <header>
+      <div id="title">
+        <img
+          src="/src/front/homepage/imgHomepage/logo (2).png"
+          alt=""
+          width="100px"
+          height="50px"
+        />
+      </div>
+
+      <ul>
+        <a href="/src/front/homepage/index.html"><li>Início</li></a>
+        <a href="/src/front/cadastroelogininst/cadastroinstituicao/cadinstituicao.html"><li>Instituição</li></a>
+        <a href="/src/front/cadastroelogin/login.html" id="inscreva-se-btn"
+          ><li>Registrar/Entrar</li></a
+        >
+      </ul>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="signin-signup">
+          <form class="sign-in-form" id="loginForm" action="" method="post">
+            <h2 class="title">Entrar</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                type="email"
+                placeholder="Email"
+                id="usernameSignIn"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                placeholder="Senha"
+                id="passwordSignIn"
+                required
+              />
+            </div>
+            <input type="button" value="Entrar" class="btn" id="loginBtn" onclick="login()"/>
+            <p class="account-text">
+              Ainda não tem conta? <a href="#" id="sign-up-btn2">Cadastrar</a>
+            </p>
+          </form>
+
+          <form action="" class="sign-up-form" id="signupForm" method="post">
+            <h2 class="title">Cadastrar</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                placeholder="Nome"
+                id="usernameSignUp"
+                name="nome"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                placeholder="CPF"
+                id="usercpfSignUp"
+                name="cpf"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-calendar-alt"></i>
+              <input
+                type="text"
+                placeholder="Data de Nascimento"
+                id="userdnSignUp"
+                name="data-nascimento"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-phone"></i>
+              <input
+                type="text"
+                placeholder="Telefone"
+                id="usernameTelSignUp"
+                name="telefone"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                placeholder="Email"
+                id="emailSignUp"
+                name="email"
+                required
+              />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input
+                type="password"
+                placeholder="Senha"
+                id="passwordSignUp"
+                name=""
+                required
+              />
+            </div>
+            <button
+              type="button"
+              onclick="submitForm()"
+              value="Cadastrar"
+              class="btn"
+              id="signupBtn"
+            >
+              Cadastrar
+            </button>
+
+            <p class="account-text">
+              Já tem conta? <a href="#" id="sign-in-btn2">Entrar</a>
+            </p>
+          </form>
+        </div>
+        <div class="panels-container">
+          <div class="panel left-panel">
+            <div class="content">
+              <h3>Bem vindo Doador!</h3>
+              <img class="img-log" src="/src/img/logo.png" />
+              <p>Já tem conta?</p>
+              <button class="btn" id="sign-in-btn">Entrar</button>
+            </div>
+          </div>
+          <div class="panel right-panel">
+            <div class="content">
+              <h3>Bem vindo Doador!</h3>
+              <img class="img-log" src="/src/img/logo.png" />
+              <p>Ainda não tem conta?</p>
+              <button class="btn" id="sign-up-btn">Cadastrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/src/front/module/cookie.js"></script>
+    <script src="/src/front/cadastroelogin/login.js"></script>
+  </body>
+</html>

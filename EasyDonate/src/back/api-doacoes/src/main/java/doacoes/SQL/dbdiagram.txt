@@ -1,0 +1,71 @@
+Table Doadores {
+  cpf varchar [pk]
+  nome varchar
+  senha varchar
+  email varchar
+  telefone varchar
+  nascimento date
+  criacao_conta timestamp 
+  aprovacao boolean
+}
+
+Table instituicoes {
+  cnpj varchar [pk]
+  nome varchar
+  cep varchar
+  bairro varchar
+  nomerua varchar
+  numerolugar integer
+  criacao timestamp 
+}
+
+Table Materiais {
+  nome varchar [pk]
+}
+
+Table materialnecessitado {
+  idMaterialNecessitado integer
+  instituicaoCnpj varchar
+  idMaterial integer
+  quantidade integer
+  Ref: materialnecessitado.instituicaoCnpj > instituicoes.cnpj
+  Ref: materialnecessitado.idMaterial > materiais.id
+}
+
+Table Material_Cadastro_User {
+  id int [pk]
+  material_nome varchar
+  user_cpf varchar
+  estado varchar
+  validade date
+  cadastro timestamp 
+}
+
+Table Materiais_Compra {
+  id_compra int [pk]
+  preco float
+  material_nome varchar
+}
+
+Table Doacao{
+  id_doacao int [pk]
+  instituicao_cnpj varchar
+  quantidade int
+  usuario_cpf varchar
+}
+
+Table Item_doado {
+  id int [pk]
+  id_doacao int
+  cadastrado_id int
+}
+
+Ref: MaterialNecessitado.instituicao_cnpj > Institutions.cnpj
+Ref: MaterialNecessitado.material_nome > Materiais.nome
+Ref: Material_Cadastro_User.material_nome > Materiais.nome
+Ref: Material_Cadastro_User.user_cpf > Users.cpf
+Ref: Materiais_Compra.material_nome > Materiais.nome
+Ref: Item_doado.cadastrado_id < Material_Cadastro_User.id
+Ref: Doacao.id_doacao < Item_doado.id_doacao
+Ref: Doacao.instituicao_cnpj < Institutions.cnpj
+Ref: Doacao.usuario_cpf < Users.cpf

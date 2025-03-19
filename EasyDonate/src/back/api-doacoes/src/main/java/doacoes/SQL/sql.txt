@@ -1,0 +1,63 @@
+CREATE TABLE doadores (
+  cpf VARCHAR(11) PRIMARY KEY,
+  nome VARCHAR(100),
+  senha VARCHAR(100),
+  email VARCHAR(100),
+  telefone VARCHAR(20),
+  nascimento DATE,
+  criacao_conta TIMESTAMP,
+  aprovacao BOOLEAN
+);
+
+CREATE TABLE instituicoes (
+  cnpj VARCHAR(20) PRIMARY KEY,
+  nome VARCHAR(100),
+  cep VARCHAR(10),
+  bairro VARCHAR(100),
+  nomerua VARCHAR(100),
+  numerolugar INTEGER,
+  criacao TIMESTAMP,
+  aprovacao BOOLEAN,
+  senha VARCHAR(100)
+);
+
+CREATE TABLE materiais(
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  nome_material VARCHAR(20)
+);
+
+CREATE TABLE materialnecessitado (
+  idmterialnecessitado INTEGER AUTO_INCREMENT PRIMARY KEY,
+  instituicaocnpj VARCHAR(20),
+  idmaterial INTEGER,
+  quantidade INTEGER,
+  FOREIGN KEY (instituicaocnpj) REFERENCES instituicoes(cnpj),
+  FOREIGN KEY (idmaterial) REFERENCES materiais(id)
+);
+
+CREATE TABLE cadastrarmaterialuser(
+  id_material_user INTEGER AUTO_INCREMENT PRIMARY KEY, 
+  id_material INTEGER,
+  user_cpf VARCHAR(11),
+  validade DATETIME,
+  data_cadastro DATETIME,
+  aprovacao BOOLEAN,
+  FOREIGN KEY (id_material) REFERENCES materiais(id),
+  FOREIGN KEY (user_cpf) REFERENCES doadores(cpf)
+);
+
+CREATE TABLE doacao(
+  id_doacao INTEGER AUTO_INCREMENT PRIMARY KEY,
+  users_cpf VARCHAR(11),
+  instituicoescnpj VARCHAR(20),
+  FOREIGN KEY (users_cpf) REFERENCES doadores(cpf),
+  FOREIGN KEY (instituicoescnpj) REFERENCES instituicoes(cnpj)
+);
+
+CREATE TABLE itemdoado(
+  id_item_doado INTEGER AUTO_INCREMENT PRIMARY KEY,
+  id_doacao INTEGER,
+  id_material_user INTEGER,
+  FOREIGN KEY (id_doacao) REFERENCES doacao(id_doacao),
+  FOREIGN KEY (id_material_user) REFERENCES cadastrarmaterialuser(id_material_user)
+);

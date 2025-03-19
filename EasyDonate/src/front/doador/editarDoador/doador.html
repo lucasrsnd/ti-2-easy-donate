@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="doador.css" />
+    <link rel="shortcut icon" type="imagex/png" href="/src/img/logo.png" />
+    <title>Perfil Doador</title>
+  </head>
+
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <a href="/src/front/homepage/index.html" class="logo">
+        <i class="bx bx-home"></i>
+        <div class="logo-name"><span>Easy</span>Donate</div>
+      </a>
+      <ul class="side-menu">
+        <li class="active">
+          <a href="/src/front/doador/editarDoador/doador.html"
+            ><i class="bx bxs-dashboard"></i>Perfil do Doador</a
+          >
+        </li>
+        <li>
+          <a
+            href="/src/front/doador/instituiçõesNecessitadas/instituicoesneces.html"
+            ><i class="bx bx-analyse"></i>Instituições</a
+          >
+        </li>
+        <li>
+          <a href="/src/front/doador/cadastrarMateriaisDoador/cadastrarMaterialDoador.html"><i class="bx bx-store-alt"></i>Cadastrar Materiais</a>
+        </li>
+
+      </ul>
+      <ul class="side-menu">
+        <li>
+            <button class="Btn">
+                <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>
+                <div class="text">Sair</div>
+              </button>
+        </li>
+    </ul>
+    </div>
+    <!-- Fim da Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="painel.html">
+                <div class="form-input">
+                </div>
+            </form>
+
+        <!-- Dark-Mode -->
+        <label class="switch">
+          <input id="switch" type="checkbox" />
+          <span class="slider"></span>
+        </label>
+
+
+        </nav>
+        <!-- Final Navbar -->
+
+      <!-- Final Navbar -->
+
+      <main>
+        <div class="header">
+          <div class="left">
+            <h1>Perfil Doador</h1>
+            <ul class="breadcrumb">
+              <li><a href="#"> Perfil do Doador </a></li>
+              /
+              <li><a href="#" class="active">Editar perfil</a></li>
+            </ul>
+          </div>
+          <a href="#" class="report">
+            <i class="bx bx-pencil"></i>
+            <span>Editar dados</span>
+          </a>
+        </div>
+
+            <div class="bottom-data">
+                <div class="orders">
+                    <div class="header">
+                        <i class='bx bx-receipt'></i>
+                        <h3>Dados da Doador</h3>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Doador</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><p>Nome</p></td>
+                                <td id="nome">exemplo</td>
+                            </tr>
+                            <tr>
+                                <td><p>CPF</p></td>
+                                <td id="cpf">exemplo</td>
+                            </tr>
+                            <tr>
+                                <td><p>Data de Nascimento</p></td>
+                                <td id="data-nascimento">exemplo</td>
+                            </tr>
+                            <tr>
+                                <td><p>Telefone</p></td>
+                                <td id="telefone">exemplo</td>
+                            </tr>
+                            <tr>
+                                <td><p>Email</p></td>
+                                <td id="email">exemplo</td>
+                            </tr>
+                            <tr>
+                                <td><p>Senha</p></td>
+                                <td id="senha">exemplo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button id="confirmar-mudancas">Confirmar Mudanças</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="doador.js"></script>
+    <script src="/src/front/module/cookie.js"></script>
+    <script type="module" src="/src/front/module/import.js"></script>
+</body>
+
+</html>

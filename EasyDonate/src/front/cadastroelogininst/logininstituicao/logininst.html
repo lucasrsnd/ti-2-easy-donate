@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/src/front/cadastroelogininst/logininstituicao/logininst.css" />
+    <link rel="shortcut icon" type="imagex/png" href="/src/img/logo.png">
+    <title>Login de Instituição</title>
+  </head>
+  <body>
+    <header>
+      <div id="title">
+        <img
+          src="/src/front/homepage/imgHomepage/logo (2).png"
+          alt=""
+          width="100px"
+          height="50px"
+        />
+      </div>
+
+      <ul>
+        <a href="/src/front/homepage/index.html"><li>Início</li></a>
+        <a href="#"><li>Instituição</li></a>
+        <a href="/src/front/cadastroelogin/login.html" id="inscreva-se-btn"
+        ><li>Registrar/Entrar</li></a>
+      </ul>
+    </header>
+    <main>
+      <div class="container">
+        <div class="signin-signup">
+          <form class="sign-in-form" id="loginForm" action="" method="post">
+            <h2 class="title">Login Instituição</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="CNPJ" id="cnpjinst" name="cnpj" required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="password" placeholder="Senha" id="senhainst" name="senha" required/>
+            </div>
+            <input type="button" onclick="submitForm()" value="Enviar" class="btn" id="LoginBtn"/>
+          </form>
+
+
+          <!--lado direito do cadastro-->
+
+          <form action="" class="sign-up-form" id="signupForm" method="post"></form></div>
+        <div class="panels-container">
+          <div class="panel left-panel"></div>
+          <div class="panel right-panel">
+            <div class="content">
+              <h3>Bem vindo de volta, Instituição!</h3>
+              <img class="img-log" src="/src/img/logo.png" />
+              <a href="/src/front/cadastroelogininst/cadastroinstituicao/cadinstituicao.html" class="visitante">Cadastrar Instituição.</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="/src/front/module/cookie.js"></script>
+    <script src="/src/front/cadastroelogininst/logininstituicao/logininst.js"></script>
+  </body>
+</html>

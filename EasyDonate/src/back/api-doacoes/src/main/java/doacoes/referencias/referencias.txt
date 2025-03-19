@@ -1,0 +1,4 @@
+https://github.com/gabrielpulga/aplicacao-cadastro-de-pessoas
+https://rennason.medium.com/rest-api-para-cadastro-hibernate-jpa-105b90621b1e
+https://github.com/MMoreira400/Tela-de-Login-Funcional-com-Spring-Boot
+https://mmarcosab.medium.com/crud-em-api-rest-com-spring-boot-h2-maven-e-jpa-hibernate-e-documenta%C3%A7%C3%A3o-com-swagger-parte-1-1040e2aae0ed

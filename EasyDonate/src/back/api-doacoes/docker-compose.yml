@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:8.0.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'doacoes'
+      MYSQL_USER: 'doacoes'
+      MYSQL_PASSWORD: 'doacoes147852'
+      MYSQL_ROOT_PASSWORD: 'ZGJzZW5oYWRvYWNvZXM='
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - doacoes-db:/var/lib/mysql
+volumes:
+  doacoes-db:
